@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #050505;
+  --color-cyber-accent: #6d28d9; /* Violet */
+  --color-cyber-neon: #00f2ff; /* Cyan */
+  --color-cyber-card: #111111;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-white font-sans antialiased;
+  }
+}
+
+.cyber-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
